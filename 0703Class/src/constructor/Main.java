@@ -30,6 +30,7 @@ public class Main {
 		
 		pr2.display();
 		System.out.println("작업더함");
+		System.out.println("한번 더 작업");
 	}
 
 }
