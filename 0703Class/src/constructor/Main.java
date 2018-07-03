@@ -29,6 +29,7 @@ public class Main {
 		
 		
 		pr2.display();
+		System.out.println("작업더함");
 	}
 
 }
