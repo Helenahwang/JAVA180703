@@ -29,6 +29,8 @@ public class Main2 {
 			// 예외 내용을 추적
 			e.printStackTrace();
 			
+		}finally{
+			System.out.println("무조건 실행");
 		}
 	}
 
