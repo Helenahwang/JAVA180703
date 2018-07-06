@@ -6,7 +6,7 @@ public class Map {
 
 	// 매개변수가 없는 생성자 - default constructor
 	public Map() {
-		super();
+		super(); // Object 클래스를 상속받아서...
 	}
 
 	//접근자 메소드 - getter & setter
@@ -28,7 +28,7 @@ public class Map {
 	
 	// 매개변수가 있는 생성자
 	public Map(double latitude, double longtitude) {
-		super();
+		super(); // Object 클래스를 상속받아서...
 		this.latitude = latitude;
 		this.longtitude = longtitude;
 	}
