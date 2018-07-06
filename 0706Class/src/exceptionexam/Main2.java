@@ -50,25 +50,22 @@ public class Main2 {
 		
 		int idx=0;
 		String arr[] = {"김기태", "이종범", "최향남", "이대진"};
-		for(;;) {
-			System.out.println(arr[idx]);
-			
-			try {
+		
+		try {
+			for(;;) {
+				System.out.println(arr[idx]);
 				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-			
-			//System.out.println(Math.random());
-			idx=(int) ((Math.random()*100)%4);
-			
-			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-		
-		
-
+			
+		//System.out.println(Math.random());
+		idx=(int) ((Math.random()*100)%4);
+			
+			
 	}
-
+		
 }
+
