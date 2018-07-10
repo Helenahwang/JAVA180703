@@ -27,6 +27,12 @@ public class Problems {
 		}
 
 		money=money%10000;
+		
+		int five=0;
+		if(money>=5000) {
+			five=money/5000;
+		}
+		money=money%5000;
 
 		int one=0;
 		if(money>=1000) {
@@ -36,12 +42,12 @@ public class Problems {
 		money=money%1000;
 
 
-		System.out.printf("오만원 %d장, 만원 %d장, 천원 %d장", fif, ten, one);
+		System.out.printf("오만원 %d장, 만원 %d장, 오천원 %d장, 천원 %d장", fif, ten, five, one);
 		*/
 		
 		
 		//2
-		/*
+		
 		for(int i=0; i<5; i++) {
 		
 				if(i<2) {
@@ -64,10 +70,10 @@ public class Problems {
 				
 			}
 		
-		*/
+		
 		
 		//3
-		
+		/*
 		int[][] ar=new int[6][11];
 
 		int count=0;
@@ -120,7 +126,7 @@ public class Problems {
 			}
 			System.out.println();
 		}
-
+		*/
 		
 		
 		
