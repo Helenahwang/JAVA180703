@@ -3,6 +3,7 @@ package arrays;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Main2 {
 
@@ -87,6 +88,63 @@ public class Main2 {
 		for(Book tmp : books) {
 			System.out.println(tmp);
 		}
+		
+		System.out.println();
+		
+		
+		
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+			
+			Comparator<Book> comparator=null; //선언만 여기에...
+			System.out.print("0:종료 1:제목오름차순 2:제목내림차순> ");
+			
+			int menu = sc.nextInt();
+			if(menu==0) {
+				break;
+			}
+			else if(menu==1) {
+				comparator = new Comparator() {
+					@Override
+					public int compare(Object o1, Object o2) {
+						//데이터 형 변환
+						Book first = (Book)o1;
+						Book second = (Book)o2;
+						return first.getTitle().compareTo(second.getTitle());
+					
+					}
+					
+				};
+				
+			}else if(menu==2) {
+				comparator = new Comparator() {
+					@Override
+					public int compare(Object o1, Object o2) {
+						//데이터 형 변환
+						Book first = (Book)o1;
+						Book second = (Book)o2;
+						return second.getTitle().compareTo(first.getTitle());
+					
+					}
+					
+				};
+				
+			}
+			
+			Arrays.sort(books,comparator);
+			
+			for(Book tmp : books) {
+				System.out.println(tmp);
+			}
+			
+			
+		}
+		
+		sc.close();
+		
+		
+		
+		
 		
 		
 
