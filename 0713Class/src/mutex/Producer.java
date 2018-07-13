@@ -1,41 +1,22 @@
 package mutex;
 
-import java.util.ArrayList;
 
 public class Producer extends Thread {
 	
-	private ArrayList<Character> list1;
+	private ShareData shareData;
 	
 	//생성자
-	public Producer(ArrayList<Character> list1) {
-		this.list1=list1;
+	public Producer(ShareData shareData) {
+		this.shareData=shareData;
 	}
 	
-	//스레드로 수행할 메소드
-	private synchronized void save() {
-		//1초씩 쉬면서 26번 동작
-		for(int i=0; i<26; i++) {
-			char ch=(char)(65+i);
-			System.out.println(ch+"를 저장합니다.");
-			list1.add(ch);
-			
-			//wait 중인 스레드를 깨우기
-			notifyAll();
-			
-			
-			try {
-				
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
 	
 	//스레드로 동작할 메소드
 	public void run() {
-		save();
+		for(int i=0; i<26; i++) {
+			//65에 i를 더해서 문자로 변경한 후 save 메소드에게 전달
+			shareData.save((char)(65+i));
+		}
 	}
 	
 
