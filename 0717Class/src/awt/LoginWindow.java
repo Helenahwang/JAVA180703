@@ -10,6 +10,8 @@ import java.awt.MenuItem;
 import java.awt.Panel;
 import java.awt.TextArea;
 import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginWindow extends Frame {
 	
@@ -64,20 +66,45 @@ public class LoginWindow extends Frame {
 		file.add(subfile3); //메뉴 안에 메뉴 들어갈 수 있다.
 		
 		
+		
+		
 		//파일 대화상자 만들기
 		FileDialog filedg=new FileDialog(this,"new");
 		
 		//디렉토리 설정
 		filedg.setDirectory("C:\\Users\\503-02\\Desktop");
 		
+		/*
 		//파일 대화상자를 화면에 출력
 		filedg.setVisible(true);
 		
 		//선택한 파일 경로 가져오기
 		String filepath=filedg.getDirectory() + filedg.getFile();
 		
-		Label label = new Label(filepath);
-		add(label);
+		//Label label = new Label(filepath);
+		//add(label);
+		
+		ta.setText(filepath);
+		*/
+		
+		
+		ActionListener al=new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				filedg.setVisible(true);
+				String filepath = filedg.getDirectory()+filedg.getFile();
+				ta.setText(filepath);
+				
+			}
+			
+		};
+		
+		subfile1.addActionListener(al);
+		
+		
+		
+		
 		
 		
 		
