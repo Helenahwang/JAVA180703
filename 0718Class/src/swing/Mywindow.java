@@ -49,10 +49,11 @@ public class Mywindow extends JFrame {
 		
 
 
+		//JPanel panel1 = new JPanel();
 		JButton btn = new JButton("버튼");
-		panel.add(btn);
+		//panel1.add(btn);
 		//add("South",panel1);
-		//add(panel1);
+		add("South",btn);
 		
 		
 		//패널을 프레임에 부착
