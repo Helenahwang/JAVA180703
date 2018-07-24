@@ -32,6 +32,8 @@ public class ListMain3 {
 		};
 		
 		ar.sort(comp);
+		
+		
 		//List는 toString 재정의 되어 있어서 인스턴스를 출력하면 데이터가 순서대로 toString을 호출한다.
 		System.out.println(ar);
 	

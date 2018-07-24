@@ -13,7 +13,7 @@ public class PracticeMain {
 
 	public static void main(String[] args) {
 		
-	
+	/*
 		ObjectOutputStream oos = null;
 		Date date=new Date();
 		
@@ -28,7 +28,7 @@ public class PracticeMain {
 				Practice pr=new Practice();
 				pr.setA(1.4+i);
 				pr.setB(1.8+i);
-				pr.setD(date.getTime()/1000);
+				pr.setD(date.getTime());
 				oos.writeObject(pr);
 			}
 			
@@ -50,16 +50,16 @@ public class PracticeMain {
 			}
 			
 		}
-	
+	*/
 		
-		/*
+		
 		ObjectInputStream ois = null;
 		
 		try {
 			
 			ois = new ObjectInputStream(new FileInputStream("./oos1.txt"));
 			
-			for(int i=0; i<1; i++) {
+			for(int i=0; i<10; i++) {
 				Practice pr =(Practice)ois.readObject();
 				System.out.println(pr);
 			}
@@ -81,8 +81,8 @@ public class PracticeMain {
 			}
 			
 		}
-		*/
-		
+	
+	
 
 	}
 
